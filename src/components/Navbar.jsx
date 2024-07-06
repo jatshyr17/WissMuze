@@ -1,7 +1,7 @@
 import React from 'react'
 import { assets } from '../assets/assets'
 import { useNavigate } from 'react-router-dom';
-import { useAuth0 } from '@auth0/auth0-react';
+
 
 function Navbar() {
    const navigate = useNavigate();
@@ -20,7 +20,7 @@ function Navbar() {
             <p className='bg-white text-black text-[15px] px-4 py-1 rounded-2xl hidden md:block cursor-pointer'>
                 Explore Artists        </p>
                 <p className='bg-black py-1 px-4 rounded-2xl text-[15px] cursor-pointer md:block'>Bio Of Legends</p>
-                { isAuthenticated ? ( <button onClick={(e)=>logout()} className='bg-black py-1 px-3 rounded-2xl text-white text-[15px]  flex items-center justify-center cursor-pointer' >Log Out</button>):( <button onClick={(e)=> loginWithRedirect()}className='bg-black py-1 px-3 rounded-2xl text-white text-[15px]  flex items-center justify-center cursor-pointer'>Log In</button>)}
+               <button className='bg-black py-1 px-3 rounded-2xl text-white text-[15px]  flex items-center justify-center cursor-pointer'>Log In</button>)}
                 
              
         </div>

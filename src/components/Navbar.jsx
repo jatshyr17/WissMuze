@@ -5,8 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 function Navbar() {
    const navigate = useNavigate();
-   const{user,loginWithRedirect,isAuthenticated,logout} = useAuth0();
-   console.log("Current User" , user);
+   
     
   return (
     <>

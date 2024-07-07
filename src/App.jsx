@@ -11,7 +11,7 @@ function App() {
   const{audioRef,track}=useContext(Playercontext);
   return (
     <>
-    <div className='bg-blue-950 w-screen h-screen '>
+    <div className='bg-blue-950 w-screen h-screen sm:[640px] md:[768px] '>
       <div className='h-[90%] flex'>
        
       <Sidebar/>

@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from './Navbar'
 import Albumitem from './Albumitem'
 import Songitem from './Songitem'
-import { albumsData, podCasts, songsData,songsData1 } from '../assets/assets'
+import { albumsData, podCasts, songsData } from '../assets/assets'
 import Poditems from './Poditems'
 
 function DisplayHome() {

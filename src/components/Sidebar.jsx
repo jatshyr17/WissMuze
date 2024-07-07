@@ -1,11 +1,11 @@
  import React from 'react'
  import { assets } from '../assets/assets'
-
- import { Link } from 'react-router-dom'
+ import History from './History'
+ import { useNavigate } from 'react-router-dom'
  
- function Sidebar() {
+ function Sidebar({id}) {
   
-   
+   const navigate = useNavigate()
    return (
      <div className='w-[25%] h-[100%] p-2 flex-col gap-2 text-white hidden lg:flex'>
         <div className='bg-[#0a113a] h-[40%] rounded flex flex-col justify-around '>
@@ -44,10 +44,11 @@
             <div className='p-4 bg-[#2e3661] m-2 rounded font-semibold flex flex-col items-start justify-start gap-1 pl-4'>
               <h1>Want to explore the history of HipHop</h1>
               <p className='font-light'>This is for the all people who are in love with this culture</p>
-              <Link to='/'><button  className='px-4 py-1.5 bg-white text-[15px] text-black rounded-full mt-4'>History of HipHop</button></Link>
+              <button onClick={()=>navigate("/history")} className='px-4 py-1.5 bg-white text-[15px] text-black rounded-full mt-4'>History of HipHop</button>
               
             </div>
           </div>
+          
         </div>
      
      

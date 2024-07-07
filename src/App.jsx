@@ -13,9 +13,10 @@ function App() {
     <>
     <div className='bg-blue-950 w-screen h-screen '>
       <div className='h-[90%] flex'>
-        <Sidebar/>
-        
+       
+      <Sidebar/>
         <Display/>
+        
         
         
       </div>

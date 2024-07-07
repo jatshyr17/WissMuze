@@ -1,7 +1,8 @@
  import React from 'react'
  import { assets } from '../assets/assets'
- import History from './History'
+ 
  import { useNavigate } from 'react-router-dom'
+ 
  
  function Sidebar({id}) {
   

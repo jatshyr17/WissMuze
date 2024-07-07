@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import { Auth0Provider } from '@auth0/auth0-react'
 import './index.css'
-import { BrowserRouter, createBrowserRouter, RouterProvider} from 'react-router-dom'
+import { BrowserRouter} from 'react-router-dom'
 import PlayercontextProvider from './context/Playercontext.jsx'
+
 
 
 
@@ -18,14 +19,20 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       }}>
     <BrowserRouter>
     <PlayercontextProvider>
+    <App/>
     
-       <App/>
+   
       
         
     </PlayercontextProvider>
     
+    
      </BrowserRouter>
+
+   
+
      </Auth0Provider>
+     
     </React.StrictMode>
     
 )

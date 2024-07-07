@@ -15,7 +15,7 @@ function App() {
       <div className='h-[90%] flex'>
        
       <Sidebar/>
-        <Display/>
+      <Display/>
         
         
         

@@ -9,7 +9,7 @@
    const navigate = useNavigate()
    return (
       
-     <div className='lg:w-[20%] sm:w-[2%] md:flex  h-full p-2 flex-col  gap-2 text-white '>
+     <div className='lg:w-[20%] hidden md:flex  h-full p-2 flex-col  gap-2 text-white '>
         <div className='bg-blue-950 h-[15%] rounded flex flex-col justify-around gap-4'>
             <div  onClick={()=>navigate("/")} className='flex items-center gap-3 pl-4 cursor-pointer mt-2 text-slate-300 hover:text-white'>
                 <img className="w-6 " src={assets.home_icon} alt="" />

@@ -24,7 +24,7 @@ function Player() {
           }, [playStatus, play, pause, previous, next]);
         
   return (
-    <div className='  bg-black flex justify-between items-center text-white px-4 grid-cols-3 p-4 position:fixed z-999 '>
+    <div className=' border-t-1 flex justify-between items-center text-white px-4 grid-cols-3 p-4 position:fixed z-999 '>
         <div className='hidden lg:flex items-center gap-4'>
             <img className='w-12' src={track.image} alt=''/>
             <div className=' overflow-hidden'>

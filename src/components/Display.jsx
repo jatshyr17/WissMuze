@@ -2,9 +2,10 @@ import React,{ useEffect,useRef} from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import DisplayHome from './DisplayHome'
 import DisplayAlbum from './DisplayAlbum'
-import History from './History'
-import Bio from './Bio'
+
+import Profile from './Profile'
 import { albumsData } from '../assets/assets'
+import Music from './Music'
 
 function Display() {
   const displayRef = useRef();
@@ -15,20 +16,21 @@ function Display() {
 
   useEffect(()=>{
     if(isAlbum){
-    displayRef.current.style.background = `linear-gradient(${bgColor},lightblue)`
+    displayRef.current.style.background = '#eaedec'
   }
   else{
-    displayRef.current.style.background = `linear-gradient(${bgColor},lightblue)`
+    displayRef.current.style.background = '#eaedec'
 
   }})
   
   return (
-    <div ref={displayRef} className ='w-[100%] m-2 px-6 pt-4 rounded bg-[#121212] text-yellow-50 overflow-auto lg:w-[75%]'>
+    <div ref={displayRef} className ='w-[100%] m-2 px-6 pt-4 rounded bg-[#121212] text-gray-600 overflow-auto lg:w-[80%] h-[100%]' >
       <Routes>
         <Route path='/' element = {<DisplayHome/>}/>
         <Route path='/album/:id' element={<DisplayAlbum/>}/>
-        <Route path='/history' element={<History/>}/>
-        <Route path='/bio' element={<Bio/>}/>
+        <Route path='/music' element={<Music/>}/>
+        
+        <Route path='/profile' element={<Profile/>}/>
       </Routes>
     </div>
   )

@@ -1,4 +1,4 @@
-import React,{useContext} from 'react'
+import React,{useContext,useEffect} from 'react'
 import { assets } from '../assets/assets'
 
 import { Playercontext } from '../context/Playercontext';
@@ -6,16 +6,33 @@ import { Playercontext } from '../context/Playercontext';
 function Player() {
     const {track,seekBar,seekBg,playStatus,play,
         seekSong,pause,time,previous,next} = useContext(Playercontext);
+
+        useEffect(() => {
+            const handleKeyDown = (event) => {
+              if (event.code === 'Space') {
+                event.preventDefault(); // Prevent default spacebar behavior
+                playStatus ? pause() : play();
+              } else if (event.code === 'ArrowLeft') {
+                previous();
+              } else if (event.code === 'ArrowRight') {
+                next();
+              }
+            };
+        
+            window.addEventListener('keydown', handleKeyDown);
+            return () => window.removeEventListener('keydown', handleKeyDown);
+          }, [playStatus, play, pause, previous, next]);
+        
   return (
-    <div className='h-[10%] bg-blue-550 flex justify-between items-center text-white px-4'>
+    <div className='  bg-black flex justify-between items-center text-white px-4 grid-cols-3 p-4 position:fixed z-999 '>
         <div className='hidden lg:flex items-center gap-4'>
             <img className='w-12' src={track.image} alt=''/>
-            <div>
-                <p>{track.name}</p>
-                <p>{track.artistname}</p>
+            <div className=' overflow-hidden'>
+                <p className='truncate'>{track.name}</p>
+                <p className='truncate'>{track.artistname}</p>
             </div>
         </div>
-        <div className='flex flex-col items-center gap-1 m-auto'>
+        <div className='flex flex-col items-center gap-1 m-auto z-10 position:absolute '>
             <div className='flex gap-4'>
             <img className='w-4 cursor-pointer' src={assets.shuffle_icon} alt=""/>
             <img onClick={previous}className='w-4 cursor-pointer' src={assets.prev_icon} alt=""/>
@@ -33,16 +50,16 @@ function Player() {
             </div>
         </div>
         <div className='hidden lg:flex items-center gap-2 opacity-75'>
-            <img className='w-4' src={assets.plays_icon} alt=""/>
-            <img className='w-4' src={assets.mic_icon} alt=""/>
+           
+           
             <img className='w-4'src={assets.queue_icon} alt=""/> 
             <img className='w-4' src={assets.speaker_icon} alt=""/>
             <img className='w-4' src={assets.volume_icon} alt=""/>
             <div className='w-20 bg-slate-50 h-1 rounded'>
 
             </div>
-            <img className='w-4'src={assets.mini_player_icon}  alt="" />
-            <img className='w-4'src={assets.zoom_icon} alt="" />
+            
+           
 
         </div>
     </div>

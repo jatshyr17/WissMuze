@@ -1,13 +1,8 @@
 import React from 'react'
-import { assets } from '../assets/assets'
+import { assets } from '../assets/assets';
 import { useNavigate } from 'react-router-dom';
-
-
-function Navbar() {
-   const navigate = useNavigate();
-   
-   
-    
+const Navbar1 = () => {
+    const navigate = useNavigate();
   return (
     <>
     <div className='w-full flex justify-between items-center font-semibold'>
@@ -27,14 +22,10 @@ function Navbar() {
 
              
         </div>
-    </div>
-    <div className=' flex items-center gap-2 mt-4'>
-        <p onClick={()=>navigate('/')}className='bg-white text-black px-4 py-1 rounded-2xl cursor-pointer'>All</p>
-        <p onClick={()=>navigate('/music')}className='bg-black px-4 py-1 rounded-2xl cursor-pointer text-white'>Music</p>
-        
-    </div>
+        </div>
+  
     </>
   )
 }
 
-export default Navbar
+export default Navbar1

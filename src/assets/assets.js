@@ -9,6 +9,7 @@ import pause_icon from './pause.png'
 import plays_icon from './plays.png'
 import prev_icon from './prev.png'
 import search_icon from './search.png'
+import profile from './profile.png'
 import shuffle_icon from './shuffle.png'
 import speaker_icon from './speaker.png'
 import stack_icon from './stack.png'
@@ -22,6 +23,9 @@ import arrow_right from './right_arrow.png'
 import arrow_left from './left_arrow.png'
 import spotify_logo from './spotify_logo.png'
 import clock_icon from './clock_icon.png'
+import bookmark_icon from './bookmark_icon.png'
+import bookmark1_icon from './bookmark1_icon.png'
+import playlist_icon from './playlist_icon.jpg'
 import img1 from './img1.jpg'
 import img2 from './img2.jpg'
 import img3 from './img3.jpg'
@@ -74,7 +78,11 @@ export const assets = {
     arrow_left,
     arrow_right,
     spotify_logo,
-    clock_icon
+    clock_icon,
+    profile,
+    bookmark1_icon,
+    bookmark_icon,
+    playlist_icon
 }
 
 export const albumsData = [

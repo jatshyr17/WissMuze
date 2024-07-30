@@ -2,13 +2,12 @@ import React from 'react'
 import Navbar from './Navbar'
 import Albumitem from './Albumitem'
 import Songitem from './Songitem'
-import { albumsData, podCasts, songsData } from '../assets/assets'
-import Poditems from './Poditems'
+import { albumsData,songsData } from '../assets/assets'
 
-function DisplayHome() {
+const Music = () => {
   return (
-   <>
-   <Navbar/>
+    <>
+    <Navbar/>
    <div className='mb-4 cursor-pointer'>
     <h1 className='my-5 font-bold text-2xl'>Underrated Albums</h1>
     <div className='flex overflow-auto'>
@@ -22,15 +21,10 @@ function DisplayHome() {
     </div>
    </div>
     
-    <div className='mb-4 cursor-pointer'>
-    <h1 className='my-5 font-bold text-2xl  '>Some podcasts you may also like</h1>
-    <div className='flex overflow-auto'>
-    {podCasts.map((item,index)=>(<Poditems key={index} name={item.name} filename={item.filename} id={item.id} image={item.image}/> ))}
-    </div>
-    </div>
-   
+    
+    
    </>
   )
 }
 
-export default DisplayHome
+export default Music

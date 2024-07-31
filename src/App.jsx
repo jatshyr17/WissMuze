@@ -1,4 +1,4 @@
-mport React, { useContext,useState,useEffect } from 'react'
+mport React, { useContext } from 'react'
 import Sidebar from './components/Sidebar'
 import Player from './components/Player'
 import { assets } from './assets/assets'

@@ -6,6 +6,10 @@ import DisplayAlbum from './DisplayAlbum'
 import Profile from './Profile'
 import { albumsData } from '../assets/assets'
 import Music from './Music'
+import Hardcore from './Hardcore'
+import Rnb from './Rnb'
+import Gngsta from './Gngsta'
+import Lofi from './Lofi'
 
 function Display() {
   const displayRef = useRef();
@@ -31,6 +35,10 @@ function Display() {
         <Route path='/music' element={<Music/>}/>
         
         <Route path='/profile' element={<Profile/>}/>
+        <Route path='/hardcore' element={<Hardcore/>}/>
+        <Route path ='/lofi' element={<Lofi/>}/>
+        <Route path='/rnb' element ={<Rnb/>}/>
+        <Route path='/gngsta' element={<Gngsta/>}/>
       </Routes>
     </div>
   )

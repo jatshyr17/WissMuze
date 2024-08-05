@@ -22,12 +22,22 @@ function Player() {
   }, [playStatus, play, pause, previous, next]);
 
   return (
+<<<<<<< HEAD
     <div className='border-t-2 border-blue-900 flex justify-between items-center text-white px-4 py-2 grid-cols-3 position:fixed z-999'>
       <div className='hidden lg:flex items-center gap-4'>
         <img className='w-12' src={track.image} alt='' />
         <div className='overflow-hidden'>
           <p className='truncate'>{track.name}</p>
           <p className='truncate'>{track.artistname}</p>
+=======
+    <div className=' border-t-2  border-blue-900 flex justify-between items-center text-white px-4 py-2 grid-cols-3 position:fixed z-999 '>
+        <div className='hidden lg:flex items-center gap-4'>
+            <img className='w-12' src={track.image} alt=''/>
+            <div className=' overflow-hidden'>
+                <p className='truncate'>{track.name}</p>
+                <p className='truncate'>{track.artistname}</p>
+            </div>
+>>>>>>> 8cadbfc7512abb4b162120713c239c745db9db8e
         </div>
       </div>
       <div className='flex flex-col items-center gap-1 m-auto z-10 position:absolute'>
@@ -68,4 +78,8 @@ function Player() {
   );
 }
 
+<<<<<<< HEAD
 export default Player;
+=======
+export default Player
+>>>>>>> 8cadbfc7512abb4b162120713c239c745db9db8e

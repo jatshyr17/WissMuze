@@ -26,7 +26,11 @@
               <img className='w-8' src={assets.stack_icon} alt=''/>
               <p className='font-semibold hidden lg:flex' >Your CulHub</p>
             </div>
+<<<<<<< HEAD
             <div className='flex items-center gap-3'>
+=======
+           <div className='flex items-center gap-3'>
+>>>>>>> 8cadbfc7512abb4b162120713c239c745db9db8e
               <img className='w-5 cursor-pointer hidden lg:flex' src={assets.arrow_icon} alt=''/>
               <img className='w-5 cursor-pointer hidden lg:flex' src={assets.plus_icon} alt=''/>
             </div>

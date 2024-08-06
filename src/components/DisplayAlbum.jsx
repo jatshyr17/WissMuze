@@ -38,42 +38,46 @@ function DisplayAlbum() {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-3 sm:grid-cols-5 mt-10 mb-4 pl-2">
+      <div className="grid grid-cols-5 sm:grid-cols-6 mt-10 mb-4 pl-2">
         <p className="text-gray-600">
           <span className="mr-4">#</span>Title
         </p>
         <p>Album</p>
         <p className="hidden sm:block">Date Added</p>
-        <img className="m-auto w-4" src={assets.clock_icon} alt="" />
+        <img className="m-auto w-4 " src={assets.clock_icon} alt="" />
         <div className="inline-block">
           <p className="text-gray-600">
             <img className="inline-block w-5" src={assets.bookmark_icon} alt="" />
             Bookmark
           </p>
         </div>
+        <img className='inline-block w-5' src={assets.play_plus} alt="" />
       </div>
       <hr />
       {songsData.map((item, songIndex) => (
         <div
           key={songIndex}
-          className={`grid grid-cols-3 sm:grid-cols-5 gap-2 p-2 items-center text-gray-600 hover:bg-gray-300 cursor-pointer rounded-md ${songBookmarks[songIndex] ? 'bg-blue-500' : ''}`} // Add active class for bookmarked songs
+          className={`grid grid-cols-5 sm:grid-cols-6 gap-2 p-2 items-center text-gray-600 hover:bg-gray-300 cursor-pointer rounded-md ${songBookmarks[songIndex] ? 'bg-blue-500' : ''}`} // Add active class for bookmarked songs
         >
           <div onClick={() => playWithId(item.id)}>
             <p className="text-gray-600">
               <span className="mr-4">{songIndex + 1}</span>
               <img className="inline w-10 mr-5" src={item.image} alt="" />
-              {item.name}
+              <b className='hidden lg:flex'>{item.name}</b>
             </p>
           </div>
+          
           <p className="text-[15px]">{albumData.name}</p>
           <p className="text-[15px] hidden sm:block">5 days ago</p>
-          <p className="text-[15px] text-center">{item.duration}</p>
+          <p className="text-[15px] text-center ">{item.duration}</p>
+          
           <img
             onClick={() => handleBookmark(songIndex)}
             className="w-5 cursor-pointer"
             src={songBookmarks[songIndex] ? assets.bookmark1_icon : assets.bookmark_icon} // Conditional image source
             alt=""
           />
+          <img onClick={()=>navigate('/play_plus')} className='w-5 cursor-pointer' src={assets.play_plus} alt=''/>
         </div>
       ))}
     </>
